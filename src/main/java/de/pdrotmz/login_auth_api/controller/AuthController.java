@@ -36,7 +36,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity login(@RequestBody RegisterRequestDTO registerRequestDTO) {
+    public ResponseEntity register(@RequestBody RegisterRequestDTO registerRequestDTO) {
         Optional<User> user = this.userRepository.findByEmail(registerRequestDTO.email());
 
         if(user.isEmpty()) {
